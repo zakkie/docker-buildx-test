@@ -23,6 +23,7 @@ jobs:
         with:
           path: /tmp/docker-cache
           fail-on-cache-miss: false
+          key: docker-cache-${{ github.ref_name }}-${{ vars.GITHUB_SHA }}
           restore-keys: |
             docker-cache-${{ github.ref_name }}-${{ vars.GITHUB_SHA }}
             docker-cache-${{ github.ref_name }}-
